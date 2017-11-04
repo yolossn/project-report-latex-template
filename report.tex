@@ -4,7 +4,7 @@
 
 %macros
 %titlepage
-\newcommand{\maketitlepage}[7]
+\newcommand{\maketitlepage}[8]
 {\begin{titlepage}
 \vspace*{\fill}
   \begin{center}
@@ -22,17 +22,13 @@
   \textrm{\fontsize{12}{14.4}\selectfont By\\}
   \vspace{1.5em}
   \textrm{\fontsize{20}{24}\selectfont #4, #5\\}
-  \textrm{\fontsize{20}{24}\selectfont #6, #7\\}
-}
-\newcommand{\maketitlepagecont}[3]
-{
   \vspace{0.75em}
   \textrm{\fontsize{12}{14.4}\selectfont Under the Guidance of\\}
   \vspace{0.75em}
-  \textrm{\fontsize{18}{21.6}\selectfont #1\\}
-  \textrm{\fontsize{18}{21.6}\selectfont #2\\}
+  \textrm{\fontsize{18}{21.6}\selectfont #6\\}
+  \textrm{\fontsize{18}{21.6}\selectfont #7\\}
   \vspace{0.15em}
-  \textrm{\fontsize{14}{16.8}\selectfont\textsc{#3
+  \textrm{\fontsize{14}{16.8}\selectfont\textsc{#8
 \\VIT University\\}}
   \vspace{4em}
   \includegraphics{vit.png}
@@ -41,7 +37,7 @@
 \end{titlepage}}
 
 %declaration page
-\newcommand{\makedeclarationpage}[5]
+\newcommand{\makedeclarationpage}[4]
 {
   \newpage
 
@@ -53,7 +49,7 @@
   \hyphenpenalty 10000
   \exhyphenpenalty 10000
   \noindent
-  I here by declare that the project report titled, \textbf{''#1''} submitted by us to VIT University, Vellore in fulfilment of the requirement of \textbf{#2} is a record of bonafide project work carried out by me under the guidance of \textbf{#3}. I further declare that the work reported in this project has not been submitted and will not be submitted, either in part or in full, for the award of any other course in the institute.
+  I here by declare that the project report titled, \textbf{''#1''} submitted by me to VIT University, Vellore in fulfilment of the requirement of \textbf{#2} is a record of bonafide project work carried out by me under the guidance of \textbf{#3}. I further declare that the work reported in this project has not been submitted and will not be submitted, either in part or in full, for the award of any other course in the institute.
   \endgroup
 
   \noindent
@@ -63,8 +59,6 @@
   \\
   \vspace{1.0cm}
   \hspace{\stretch{1}} {#4} \\
-  \vspace{1.0cm}
-  \hspace{\stretch{1}} {#5} \\
   \clearpage
 }
 %change table of contents title
@@ -72,10 +66,9 @@
 
 %begin
 \begin{document}
-\maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{Team mem2}{mem2 reg no}
-\maketitlepagecont{faculty name}{faculty title}{school}
+\maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{faculty name}{faculty title}{school}
 \pagenumbering{Roman} 
-\makedeclarationpage{project title}{course name}{faculty name}{team mem1}{team mem2}
+\makedeclarationpage{project title}{course name}{faculty name}{team mem1} %add date in line 58
 \tableofcontents
 \clearpage
 \pagenumbering{arabic} 
