@@ -1,6 +1,9 @@
 \documentclass[12pt,a4paper]{article}
-\RequirePackage{graphicx}
+%import packages
+\RequirePackage{graphicx} %package to insert images
 
+%macros
+%titlepage
 \newcommand{\maketitlepage}[9]
 {\begin{titlepage}
 \vspace*{\fill}
@@ -39,6 +42,7 @@
   \vspace*{\fill}
 \end{titlepage}}
 
+%declaration page
 \newcommand{\makedeclarationpage}[7]
 {
   \newpage
@@ -69,9 +73,10 @@
   \hspace{\stretch{1}}{#7} \\
   \clearpage
 }
-%change table of contents title%
+%change table of contents title
 \renewcommand{\contentsname}{{\hfill\bfseries\fontsize{14}{16.8}\selectfont \begin{center}\underline{Table of Contents}\end{center}\hfill}}
 
+%begin
 \begin{document}
 \maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{Team mem2}{mem2 reg no}{Team member3}{mem3 reg no}
 \maketitlepagecont{Team member4}{mem1 reg no}{faculty name}{faculty title}{school}
