@@ -4,7 +4,7 @@
 
 %macros
 %titlepage
-\newcommand{\maketitlepage}[9]
+\newcommand{\maketitlepage}[7]
 {\begin{titlepage}
 \vspace*{\fill}
   \begin{center}
@@ -23,7 +23,6 @@
   \vspace{1.5em}
   \textrm{\fontsize{20}{24}\selectfont #4, #5\\}
   \textrm{\fontsize{20}{24}\selectfont #6, #7\\}
-  \textrm{\fontsize{20}{24}\selectfont #8, #9\\}
 }
 \newcommand{\maketitlepagecont}[3]
 {
@@ -42,7 +41,7 @@
 \end{titlepage}}
 
 %declaration page
-\newcommand{\makedeclarationpage}[6]
+\newcommand{\makedeclarationpage}[5]
 {
   \newpage
 
@@ -66,8 +65,6 @@
   \hspace{\stretch{1}} {#4} \\
   \vspace{1.0cm}
   \hspace{\stretch{1}} {#5} \\
-  \vspace{1.0cm}
-  \hspace{\stretch{1}} {#6} \\
   \clearpage
 }
 %change table of contents title
@@ -75,10 +72,10 @@
 
 %begin
 \begin{document}
-\maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{Team mem2}{mem2 reg no}{Team member3}{mem3 reg no}
+\maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{Team mem2}{mem2 reg no}
 \maketitlepagecont{faculty name}{faculty title}{school}
 \pagenumbering{Roman} 
-\makedeclarationpage{project title}{course name}{faculty name}{team mem1}{team mem2}{team mem3}
+\makedeclarationpage{project title}{course name}{faculty name}{team mem1}{team mem2}
 \tableofcontents
 \clearpage
 \pagenumbering{arabic} 
