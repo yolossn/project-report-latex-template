@@ -25,16 +25,15 @@
   \textrm{\fontsize{20}{24}\selectfont #6, #7\\}
   \textrm{\fontsize{20}{24}\selectfont #8, #9\\}
 }
-\newcommand{\maketitlepagecont}[5]
+\newcommand{\maketitlepagecont}[3]
 {
-  \textrm{\fontsize{20}{24}\selectfont #1, #2\\}
   \vspace{0.75em}
   \textrm{\fontsize{12}{14.4}\selectfont Under the Guidance of\\}
   \vspace{0.75em}
-  \textrm{\fontsize{18}{21.6}\selectfont #3\\}
-  \textrm{\fontsize{18}{21.6}\selectfont #4\\}
+  \textrm{\fontsize{18}{21.6}\selectfont #1\\}
+  \textrm{\fontsize{18}{21.6}\selectfont #2\\}
   \vspace{0.15em}
-  \textrm{\fontsize{14}{16.8}\selectfont\textsc{#5
+  \textrm{\fontsize{14}{16.8}\selectfont\textsc{#3
 \\VIT University\\}}
   \vspace{4em}
   \includegraphics{vit.png}
@@ -43,7 +42,7 @@
 \end{titlepage}}
 
 %declaration page
-\newcommand{\makedeclarationpage}[7]
+\newcommand{\makedeclarationpage}[6]
 {
   \newpage
 
@@ -69,8 +68,6 @@
   \hspace{\stretch{1}} {#5} \\
   \vspace{1.0cm}
   \hspace{\stretch{1}} {#6} \\
-  \vspace{1.0cm}
-  \hspace{\stretch{1}}{#7} \\
   \clearpage
 }
 %change table of contents title
@@ -79,9 +76,9 @@
 %begin
 \begin{document}
 \maketitlepage{Your Project Title}{Course Code}{Course Title}{Team mem1}{mem1 reg no}{Team mem2}{mem2 reg no}{Team member3}{mem3 reg no}
-\maketitlepagecont{Team member4}{mem1 reg no}{faculty name}{faculty title}{school}
+\maketitlepagecont{faculty name}{faculty title}{school}
 \pagenumbering{Roman} 
-\makedeclarationpage{project title}{course name}{faculty name}{team mem1}{team mem2}{team mem3}{team mem4}
+\makedeclarationpage{project title}{course name}{faculty name}{team mem1}{team mem2}{team mem3}
 \tableofcontents
 \clearpage
 \pagenumbering{arabic} 
